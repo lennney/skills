@@ -49,7 +49,13 @@
       { "name": "gate-frontend", "path": "./skills/own/workflow/gate-frontend/SKILL.md" },
       { "name": "gate-seo", "path": "./skills/own/workflow/gate-seo/SKILL.md" },
       { "name": "gate-deploy", "path": "./skills/own/workflow/gate-deploy/SKILL.md" },
-      { "name": "gate-ai", "path": "./skills/own/workflow/gate-ai/SKILL.md" }
+      { "name": "gate-ai", "path": "./skills/own/workflow/gate-ai/SKILL.md" },
+      { "name": "gate-optimize", "path": "./skills/own/workflow/gate-optimize/SKILL.md" },
+      { "name": "gate-perf", "path": "./skills/own/workflow/gate-perf/SKILL.md" },
+      { "name": "gate-a11y", "path": "./skills/own/workflow/gate-a11y/SKILL.md" },
+      { "name": "gate-testcov", "path": "./skills/own/workflow/gate-testcov/SKILL.md" },
+      { "name": "gate-ci", "path": "./skills/own/workflow/gate-ci/SKILL.md" },
+      { "name": "gate-animate", "path": "./skills/own/workflow/gate-animate/SKILL.md" }
     ]
   }
 }

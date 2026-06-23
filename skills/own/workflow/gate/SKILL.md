@@ -1,67 +1,51 @@
 ---
 name: gate
-description: 建站工作流路由 — 从 0 到 1 搭建网站的每个阶段。输入你当前在做的事，自动路由到对应技能和指南。
+description: 建站工作流路由 — 从 0 到 3 的完整路线。输入你当前在做的事，自动路由到对应技能。
 ---
 
 # Gate — 建站工作流路由
 
-从 0 到 1 搭建网站，按阶段推进。每个阶段有对应的技能和步骤。
+从 0 到 1（搭起来）→ 1 到 2（优化）→ 2 到 3（精致），按阶段推进。
 
 ## 你在哪个阶段？
 
-### 🗣️ 探讨阶段
-> `/gate-discuss`
+### 🆕 从零搭建（新项目）
+还没开始？按顺序走：
 
-还不知道要做成什么样？先聊清楚需求、用户、功能、技术选型。
+> `/gate-discuss` — 🗣️ 探讨：聊需求、定功能、选技术
+>
+> 路由到：`grill-me` · `domain-modeling` · `handoff`
+>
+> `/gate-init` — 🚀 初始化：搭脚手架
+>
+> 路由到：`project-init`
+>
+> `/gate-frontend` — 🎨 前端开发：组件、布局、样式
+>
+> 路由到：`component-design` · `layouts-routing` · `styling-tailwind` · `data-fetching` · `accessibility` · `error-handling`
+>
+> `/gate-seo` — 🔍 SEO：Metadata、Sitemap
+>
+> 路由到：`seo-metadata`
+>
+> `/gate-deploy` — 🚢 部署：Vercel 上线
+>
+> 路由到：`vercel-deploy`
 
-**路由到：** `grill-me` · `domain-modeling` · `handoff`
+### 📈 已有网站优化（1 → 2 → 3）
+网站已经上线了，想做得更好：
 
-### 🚀 初始化
-> `/gate-init`
-
-项目定型了，开始搭脚手架。
-
-**路由到：** `project-init`
-
-### 🎨 前端开发
-> `/gate-frontend`
-
-写组件、搭布局、上样式、接数据。
-
-**路由到：** `component-design` · `layouts-routing` · `styling-tailwind` · `data-fetching` · `accessibility` · `error-handling` · `performance` · `e2e-playwright`
-
-### 🔍 SEO
-> `/gate-seo`
-
-让搜索引擎找到你的网站。
-
-**路由到：** `seo-metadata`
-
-### 🚢 部署
-> `/gate-deploy`
-
-上线、域名、持续部署。
-
-**路由到：** `vercel-deploy`
+> `/gate-optimize` — 📈 优化路由
+>
+> 选择优化方向：性能 · 无障碍 · 测试 · CI/CD · 动效
 
 ### 🤖 AI 辅助（贯穿全程）
+任何阶段你都需要 AI 帮忙：
+
 > `/gate-ai`
-
-任何阶段你都需要 AI 帮忙。
-
-**路由到：** `ai-coding-workflow` · `ai-code-review` · `ai-testing` · `ai-debugging` · `ai-refactoring` · `ai-git-workflow`
+>
+> 路由到：`ai-coding-workflow` · `ai-code-review` · `ai-testing` · `ai-debugging` · `ai-refactoring` · `ai-git-workflow`
 
 ---
 
-## 快速指南
-
-```
-同事: "我想搭一个游戏介绍网站"
-你:   /gate-discuss  → 聊清楚需求
-       /gate-init     → 建项目
-       /gate-frontend → 写页面
-       /gate-seo      → 配 SEO
-       /gate-deploy   → 上线
-
-卡住了随时 /gate-ai 找 AI 帮忙
-```
+**不知道怎么开始？** 直接告诉我你要做什么，我来带你走。

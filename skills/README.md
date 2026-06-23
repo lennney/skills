@@ -21,7 +21,7 @@ skills/
 │   ├── design/      #  UI/UX、设计系统、Anti-AI-Slop
 │   ├── product/     #  PRD、验收标准、User Story
 │   ├── ai/          #  AI 编码/审查/测试/调试/重构/Git
-│   └── workflow/    #  🚦 建站工作流路由（入口：/gate）
+│   └── workflow/    #  🚦 建站工作流（从0到3，入口：/gate）
 ├── plugin.json      #  Claude Code 注册文件
 ├── CLAUDE.md        #  Agent 行为指南
 └── CONTEXT.md       #  领域术语表
@@ -29,23 +29,34 @@ skills/
 
 ## 🚦 建站工作流路由
 
-一个命令 `/gate` 开始。按阶段推进，自动路由到对应技能。
+一个命令 `/gate` 开始。从 0 → 1 → 2 → 3，按阶段推进。
 
 ```
-/gate   → 路由入口（你在哪个阶段？）
-  ├── /gate-discuss    → 🗣️ 探讨：聊需求、定功能、选技术
-  ├── /gate-init       → 🚀 初始化：搭脚手架
-  ├── /gate-frontend   → 🎨 前端开发：组件、布局、样式
-  ├── /gate-seo        → 🔍 SEO：Metadata、Sitemap
-  ├── /gate-deploy     → 🚢 部署：Vercel 上线
-  └── /gate-ai         → 🤖 AI 辅助（贯穿全程）
+/gate   → 路由入口
+├── 🆕 从零搭建
+│   ├── /gate-discuss    → 🗣️ 探讨：需求+技术选型
+│   ├── /gate-init       → 🚀 初始化：搭脚手架
+│   ├── /gate-frontend   → 🎨 前端：组件+布局+样式
+│   ├── /gate-seo        → 🔍 SEO：Metadata+Sitemap
+│   └── /gate-deploy     → 🚢 部署：Vercel 上线
+│
+├── 📈 已有网站优化
+│   └── /gate-optimize   → 选方向：性能·无障碍·测试·CI·动效
+│       ├── /gate-perf    → ⚡ 性能优化
+│       ├── /gate-a11y    → ♿ 无障碍
+│       ├── /gate-testcov → 🧪 测试覆盖
+│       ├── /gate-ci      → 🔄 CI/CD
+│       └── /gate-animate → ✨ 动效
+│
+└── 🤖 AI 辅助（贯穿全程）
+    └── /gate-ai
 ```
 
 **使用方式：**
 ```bash
-# 在 Claude Code / Codex 中
 /gate            # 进入路由 → 选阶段
-/gate-frontend   # 直接跳到前端开发阶段
+/gate-frontend   # 直接跳到前端开发
+/gate-optimize   # 上线后想优化
 ```
 
 ---
@@ -110,3 +121,9 @@ skills/
 | `gate-seo` | Workflow 🚦 | 🔍 SEO：Metadata+Sitemap |
 | `gate-deploy` | Workflow 🚦 | 🚢 部署：Vercel 上线 |
 | `gate-ai` | Workflow 🚦 | 🤖 AI 辅助路由 |
+| `gate-optimize` | Workflow 🚦 | 📈 优化路由（1→2→3） |
+| `gate-perf` | Workflow 🚦 | ⚡ 性能优化 |
+| `gate-a11y` | Workflow 🚦 | ♿ 无障碍 |
+| `gate-testcov` | Workflow 🚦 | 🧪 测试覆盖 |
+| `gate-ci` | Workflow 🚦 | 🔄 CI/CD |
+| `gate-animate` | Workflow 🚦 | ✨ 动效与交互 |
