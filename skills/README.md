@@ -17,9 +17,10 @@ skills/
 │   ├── productivity/#  需求访谈、交接、领域建模
 │   └── design/      #  UI 设计、产品分析、设计系统
 ├── own/             # ✨ 自建技能
-│   ├── nextjs/      #  Component Design、Data Fetching、Performance 等
+│   ├── nextjs/      #  Component Design、Data Fetching、Project Init 等
 │   ├── design/      #  UI/UX、设计系统、Anti-AI-Slop
-│   └── product/     #  PRD、验收标准、User Story
+│   ├── product/     #  PRD、验收标准、User Story
+│   └── ai/          #  AI 编码工作流、AI 代码审查、AI 测试
 ├── plugin.json      #  Claude Code 注册文件
 ├── CLAUDE.md        #  Agent 行为指南
 └── CONTEXT.md       #  领域术语表
@@ -68,3 +69,9 @@ skills/
 | `prd-development` | Product | PRD 文档生成 |
 | `acceptance-criteria` | Product | 验收标准编写 |
 | `user-story` | Product | User Story 编写 |
+| `project-init` | Next.js | 项目初始化 + 目录结构 |
+| `layouts-routing` | Next.js | App Router 布局模式 |
+| `styling-tailwind` | Next.js | Tailwind CSS 实践模式 |
+| `ai-coding-workflow` | AI | AI 结对编程循环 |
+| `ai-code-review` | AI | AI 代码审查流程 |
+| `ai-testing` | AI | AI 测试生成与维护 |

@@ -32,7 +32,13 @@
       { "name": "ckm-ui-styling", "path": "./skills/own/design/ckm-ui-styling/SKILL.md" },
       { "name": "prd-development", "path": "./skills/own/product/prd-development/SKILL.md" },
       { "name": "acceptance-criteria", "path": "./skills/own/product/acceptance-criteria/SKILL.md" },
-      { "name": "user-story", "path": "./skills/own/product/user-story/SKILL.md" }
+      { "name": "user-story", "path": "./skills/own/product/user-story/SKILL.md" },
+      { "name": "project-init", "path": "./skills/own/nextjs/project-init/SKILL.md" },
+      { "name": "layouts-routing", "path": "./skills/own/nextjs/layouts-routing/SKILL.md" },
+      { "name": "styling-tailwind", "path": "./skills/own/nextjs/styling-tailwind/SKILL.md" },
+      { "name": "ai-coding-workflow", "path": "./skills/own/ai/ai-coding-workflow/SKILL.md" },
+      { "name": "ai-code-review", "path": "./skills/own/ai/ai-code-review/SKILL.md" },
+      { "name": "ai-testing", "path": "./skills/own/ai/ai-testing/SKILL.md" }
     ]
   }
 }
