@@ -42,7 +42,13 @@
       { "name": "seo-metadata", "path": "./skills/own/nextjs/seo-metadata/SKILL.md" },
       { "name": "ai-debugging", "path": "./skills/own/ai/ai-debugging/SKILL.md" },
       { "name": "ai-refactoring", "path": "./skills/own/ai/ai-refactoring/SKILL.md" },
-      { "name": "ai-git-workflow", "path": "./skills/own/ai/ai-git-workflow/SKILL.md" }
+      { "name": "ai-git-workflow", "path": "./skills/own/ai/ai-git-workflow/SKILL.md" },
+      { "name": "gate", "path": "./skills/own/workflow/gate/SKILL.md" },
+      { "name": "gate-plan", "path": "./skills/own/workflow/gate-plan/SKILL.md" },
+      { "name": "gate-review", "path": "./skills/own/workflow/gate-review/SKILL.md" },
+      { "name": "gate-impl", "path": "./skills/own/workflow/gate-impl/SKILL.md" },
+      { "name": "gate-code", "path": "./skills/own/workflow/gate-code/SKILL.md" },
+      { "name": "gate-reflect", "path": "./skills/own/workflow/gate-reflect/SKILL.md" }
     ]
   }
 }

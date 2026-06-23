@@ -7,7 +7,7 @@
 ## 技能分类
 
 - `skills/curated/` — 来自社区的技能，每个 SKILL.md 内注明来源
-- `skills/own/` — 自建技能，包含 Next.js 专项、设计、产品、AI 使用四类
+- `skills/own/` — 自建技能，包含 Next.js 专项、设计、产品、AI 使用、工作流路由五类
 
 ## 用户调用 vs 模型调用
 

@@ -20,11 +20,34 @@ skills/
 │   ├── nextjs/      #  Component Design、Data Fetching、Project Init 等
 │   ├── design/      #  UI/UX、设计系统、Anti-AI-Slop
 │   ├── product/     #  PRD、验收标准、User Story
-│   └── ai/          #  AI 编码工作流、AI 代码审查、AI 测试
+│   ├── ai/          #  AI 编码工作流、AI 代码审查、AI 测试
+│   └── workflow/    #  🚦 5-Gate 工作流路由（入口：/gate）
 ├── plugin.json      #  Claude Code 注册文件
 ├── CLAUDE.md        #  Agent 行为指南
 └── CONTEXT.md       #  领域术语表
 ```
+
+## 🚦 工作流路由
+
+一个命令 `gate` 自动路由到当前阶段。适用于 5-Gate 开发流程。
+
+```
+/gate           → 路由入口（问你在哪个阶段 → 自动引路）
+  ├── /gate-plan    → Gate 1:  写计划
+  ├── /gate-review  → Gate 2:  计划审查（12 项标准）
+  ├── /gate-impl    → Gate 3:  实现（TDD）
+  ├── /gate-code    → Gate 4:  代码审查
+  └── /gate-reflect → Gate 5:  反思沉淀
+```
+
+**使用方式：**
+```bash
+# 在 Claude Code 中
+/gate            # 进入路由 → 选阶段
+/gate-plan       # 直接跳到 Plan 阶段
+```
+
+---
 
 ## Skills 清单
 
@@ -79,3 +102,9 @@ skills/
 | `ai-debugging` | AI | AI 调试工作流 |
 | `ai-refactoring` | AI | AI 安全重构 |
 | `ai-git-workflow` | AI | AI 辅助 Git 操作 |
+| `gate` | Workflow 🚦 | 路由入口（选阶段） |
+| `gate-plan` | Workflow 🚦 | Gate 1: 写计划 |
+| `gate-review` | Workflow 🚦 | Gate 2: 计划审查 |
+| `gate-impl` | Workflow 🚦 | Gate 3: TDD 实现 |
+| `gate-code` | Workflow 🚦 | Gate 4: 代码审查 |
+| `gate-reflect` | Workflow 🚦 | Gate 5: 反思沉淀 |
