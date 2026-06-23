@@ -1,0 +1,13 @@
+{
+  "name": "frontend-skills",
+  "version": "1.0.0",
+  "description": "Frontend/Next.js Claude Code Skills — curated from community + custom built",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lennney/skills.git"
+  },
+  "files": [
+    "skills"
+  ]
+}
