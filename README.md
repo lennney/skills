@@ -2,141 +2,197 @@
 
 [![skills.sh](https://skills.sh/b/lennney/skills)](https://skills.sh/lennney/skills)
 
-Skills for building production websites with AI coding agents. Designed for people who ship — not vibe coders, not over-engineers.
+> **用 AI 搭网站，从 0 到 3，一个命令搞定。**
+> Build websites with AI — from zero to production, one command at a time.
 
-I use these skills every day with Claude Code and Codex. They turn "ask AI for code" into "tell AI what to build and watch it happen."
+---
 
-## Quickstart (30-second setup)
+## 🚀 快速开始
 
 ```bash
 npx skills@latest add lennney/skills
 ```
 
-Pick the skills you want. Then just:
+装完执行 `/gate`，AI 带你走完建站全过程。
 
-```
-/gate
-```
+---
 
-That's it. From there, the AI guides you through every phase of building a website — from discussion to deployment.
+## 为什么要用 Skills
 
-## Why These Skills Exist
+### 1. AI 不再跑偏
 
-I built these for my teammates — people who use Codex and Claude Code but want structure, not chaos. Here's what they fix.
+你只说一句话，AI 自己脑补了身份认证、数据库、博客系统——你根本没让做。
 
-### #1: The Agent Goes Off The Rails
+`/gate` 把建站拆成 **探讨 → 初始化 → 前端 → SEO → 部署** 五个阶段。AI 在哪个阶段就只做什么，不乱猜。
 
-> "Tell the AI what you need, not how to build it."
+### 2. 不用每次重教 AI
 
-**The Problem.** You tell the AI "build me a landing page." 200 lines later you have a full authentication system, a blog engine, and a database schema you never asked for. The AI guessed. It guessed wrong.
+每次新开对话，你都得重复：用 Tailwind、组件放 `src/components/`、shadcn 初始化。
 
-**The Fix** is [`/gate`](./skills/workflow/gate/SKILL.md). One command that routes to the right phase:
+Skills 把这些写成了文档——`/styling-tailwind` 加载，AI 自动照做。你的规范，自动执行。
 
-```
-/gate-discuss   → "Let's clarify what you're building"
-/gate-init      → "Scaffolding the project"
-/gate-frontend  → "Building the pages you described"
-```
+### 3. 非技术同事也能用
 
-Each phase tells the AI exactly what to do and what NOT to do. No scope creep. No guessing.
+设计师问"怎么用这个 AI？"你解释一堆命令，他们放弃了。
 
-### #2: You Repeat Yourself Every Session
+Skills 的设计原则：**AI 在后台干活，前台只提问。** 同事只需要回答问题，不需要打命令。
 
-> "Without written procedures, your AI forgets everything between sessions."
+---
 
-**The Problem.** Every time you start a new chat, you have to re-explain your conventions. "We use Tailwind. Components go in `src/components/`. We use shadcn/ui." The AI nods, then does whatever it wants.
-
-**The Fix** is formalized skills. Each skill is a documented procedure the AI follows automatically:
-
-| Without Skills | With Skills |
-|---------------|-------------|
-| "Style it like the other pages" | `/styling-tailwind` → AI knows the pattern |
-| "Add SEO stuff" | `/seo-checklist` → AI checks 10 SEO items |
-| "Review this PR" | `/ai-code-review` → AI checks 4 dimensions |
-
-Your conventions, your process, automated.
-
-### #3: Your Non-Technical Teammates Can't Use AI
-
-> "The best AI tool is useless if your designer can't run it."
-
-**The Problem.** You set up Claude Code for your team. They ask "what do I type?" You explain commands, context, flags, modes. They give up.
-
-**The Fix** is the background execution pattern. The AI does everything technical. Your teammate only answers questions:
-
-```
-AI: "What's the website about?"
-You: "A Fatekeeper game guide"
-AI: "Got it. Building the project..." (runs create-next-app in background)
-AI: "Done. What should the hero section say?"
-```
-
-No commands. No terminal. Just conversation.
-
-### #4: The 0-to-1 Workflow Is A Mess
-
-> "Most AI skills assume you already have a project. What if you're starting from scratch?"
-
-**The Problem.** Most developer tools expect you to already have a project folder, a package.json, a dev environment. But what if you're building something new?
-
-**The Fix** is the complete 0→1→2→3 workflow built into `/gate`:
-
-```
-🆕 From Zero
-  /gate-discuss   → Clarify requirements (grill-me, domain-modeling)
-  /gate-init      → Scaffold Next.js + shadcn + Git
-  /gate-frontend  → Build pages, components, styles
-  /gate-seo       → Configure Metadata + SEO checklist
-  /gate-deploy    → Push to GitHub + Vercel
-
-📈 Optimize (1 → 2 → 3)
-  /gate-perf      → Lighthouse > 95, Core Web Vitals
-  /gate-a11y      → WCAG AA, keyboard navigation
-  /gate-testcov   → Playwright E2E tests
-  /gate-ci        → Auto-deploy on push
-  /gate-animate   → Framer Motion, scroll animations
-
-🤖 AI Help (any time)
-  /gate-ai        → Coding, review, testing, debugging, refactoring
-```
-
-## Project Structure
+## 目录结构
 
 ```
 skills/
-├── website/       (12)  Component design, layouts, styling, SEO, deploy
-├── discussion/    (5)   Requirements, domain modeling, handoff
-├── engineering/   (6)   TDD, debugging, code review, prototypes
-├── design/        (11)  UI/UX, design systems, anti-AI-slop
-├── product/       (3)   PRD, acceptance criteria, user stories
-├── ai/            (6)   AI coding, review, testing, debug, refactor, git
-└── workflow/      (12)  Gate routing system — the entry point
+├── website/       (12)  建站：组件、布局、样式、SEO、部署
+├── discussion/    (5)   探讨：需求澄清、领域建模
+├── engineering/   (6)   工程：TDD、调试、代码审查
+├── design/        (11)  设计：UI/UX、设计系统
+├── product/       (3)   产品：PRD、验收标准
+├── ai/            (6)   AI 使用：编码/审查/测试/调试/重构/Git
+└── workflow/      (12)  路由系统 —— 入口 `/gate`
 ```
+
+## Workflow
+
+```
+/gate   → 路由入口
+├── 🆕 从零搭建（0→1）
+│   ├── /gate-discuss    → 🗣️ 探讨：聊需求、定功能
+│   ├── /gate-init       → 🚀 初始化：搭脚手架
+│   ├── /gate-frontend   → 🎨 前端：组件+布局+样式
+│   ├── /gate-seo        → 🔍 SEO：Metadata+检查清单
+│   └── /gate-deploy     → 🚢 部署：Vercel 上线
+│
+├── 📈 已有网站优化（1→2→3）
+│   └── /gate-optimize   → 选方向
+│       ├── /gate-perf    → ⚡ 性能优化
+│       ├── /gate-a11y    → ♿ 无障碍
+│       ├── /gate-testcov → 🧪 测试覆盖
+│       ├── /gate-ci      → 🔄 CI/CD
+│       └── /gate-animate → ✨ 动效
+│
+└── 🤖 AI 辅助（贯穿全程）
+    └── /gate-ai
+```
+
+---
 
 ## Philosophy
 
-These skills follow a few principles:
+- **Background execution** — AI 做技术活，你只回答问题
+- **Plain language** — AI 做完用大白话解释做了什么
+- **Progressive** — 从 `/gate` 开始，自然深入到具体技能
+- **Open** — 每个技能只是一个 Markdown 文件，随便改
 
-- **Background execution** — The AI does the work. You answer questions.
-- **Plain language** — The AI explains what it did in simple terms.
-- **Progressive disclosure** — Start with `/gate`, drill into specifics.
-- **No lock-in** — Each skill is a standalone markdown file. Adapt them.
+---
 
-## Usage
+## Skill 清单
+
+### Website / 建站 (12)
+
+| Skill | 用途 |
+|-------|------|
+| `project-init` | 项目初始化 + 脚手架 |
+| `layouts-routing` | App Router 布局模式 |
+| `component-design` | 组件设计 + Server/Client 边界 |
+| `styling-tailwind` | Tailwind CSS 实践 |
+| `data-fetching` | RSC / Server Actions |
+| `seo-metadata` | Metadata API + Sitemap |
+| `seo-checklist` | SEO 10 项检查清单 |
+| `performance` | Core Web Vitals 优化 |
+| `accessibility` | WCAG 无障碍 |
+| `error-handling` | 错误边界 + 用户反馈 |
+| `vercel-deploy` | Vercel 部署 |
+| `e2e-playwright` | Playwright E2E 测试 |
+
+### Discussion / 探讨 (5)
+
+| Skill | 来源 | 用途 |
+|-------|------|------|
+| `gate-discuss` | 自建 | 探讨阶段路由 |
+| `grill-me` | mattpocock | 需求深度访谈 |
+| `grilling` | mattpocock | 追问方法论 |
+| `handoff` | mattpocock | 上下文交接 |
+| `domain-modeling` | mattpocock | 领域建模 |
+
+### Engineering / 工程 (6)
+
+| Skill | 来源 | 用途 |
+|-------|------|------|
+| `tdd` | mattpocock | 测试驱动开发 |
+| `diagnosing-bugs` | mattpocock | 调试方法论 |
+| `prototype` | mattpocock | 快速原型 |
+| `codebase-design` | mattpocock | 深模块设计 |
+| `code-review` | awesome-skills | 代码审查 |
+| `styleseed-design-review` | bitjaru | UI 设计评分 |
+
+### Design / 设计 (11)
+
+| Skill | 来源 | 用途 |
+|-------|------|------|
+| `ui-designer` | daymade | 从截图提取设计系统 |
+| `product-analysis` | daymade | 产品多维分析 |
+| `frontend-designer` | jamesrochabrun | 前端组件设计 |
+| `ui-modernizer` | Rosalina7515 | UI 升级 |
+| `web-design-engineer` | Luispitik | Next.js 落地页 |
+| `ui-ux-pro-max` | 自建 | 全栈 UI/UX 设计 |
+| `frontend-design` | 自建 | 前端设计规范 |
+| `anti-ai-slop` | 自建 | 反 AI 味设计 |
+| `ckm-design` | 自建 | CKM 设计 |
+| `ckm-design-system` | 自建 | CKM 设计系统 |
+| `ckm-ui-styling` | 自建 | CKM UI 样式 |
+
+### Product / 产品 (3)
+
+| Skill | 用途 |
+|-------|------|
+| `prd-development` | PRD 文档生成 |
+| `acceptance-criteria` | 验收标准编写 |
+| `user-story` | User Story 编写 |
+
+### AI / AI 使用 (6)
+
+| Skill | 用途 |
+|-------|------|
+| `ai-coding-workflow` | AI 结对编程 |
+| `ai-code-review` | AI 代码审查 |
+| `ai-testing` | AI 测试生成 |
+| `ai-debugging` | AI 调试 |
+| `ai-refactoring` | AI 安全重构 |
+| `ai-git-workflow` | AI Git 操作 |
+
+### Workflow / 路由系统 (12)
+
+| Skill | 用途 |
+|-------|------|
+| `gate` | 路由入口 |
+| `gate-discuss` | 🗣️ 探讨 |
+| `gate-init` | 🚀 初始化 |
+| `gate-frontend` | 🎨 前端 |
+| `gate-seo` | 🔍 SEO |
+| `gate-deploy` | 🚢 部署 |
+| `gate-optimize` | 📈 优化路由 |
+| `gate-perf` | ⚡ 性能 |
+| `gate-a11y` | ♿ 无障碍 |
+| `gate-testcov` | 🧪 测试 |
+| `gate-ci` | 🔄 CI/CD |
+| `gate-animate` | ✨ 动效 |
+| `gate-ai` | 🤖 AI 辅助 |
+
+---
+
+## 安装
 
 ```bash
-# Install
+# 安装全部技能
 npx skills@latest add lennney/skills
 
-# Start building
+# 开始使用
 /gate
-
-# Or jump to a specific phase
-/gate-frontend
-/gate-perf
-/ai-coding-workflow
 ```
+
+---
 
 ## License
 
-MIT — use them, hack them, make them your own.
+MIT — 随意修改，按需使用。
