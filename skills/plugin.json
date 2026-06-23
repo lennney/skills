@@ -1,62 +1,226 @@
 {
   "frontend-skills": {
     "skills": [
-      { "name": "tdd", "path": "./skills/curated/engineering/tdd/SKILL.md" },
-      { "name": "diagnosing-bugs", "path": "./skills/curated/engineering/diagnosing-bugs/SKILL.md" },
-      { "name": "prototype", "path": "./skills/curated/engineering/prototype/SKILL.md" },
-      { "name": "codebase-design", "path": "./skills/curated/engineering/codebase-design/SKILL.md" },
-      { "name": "code-review", "path": "./skills/curated/engineering/code-review/SKILL.md" },
-      { "name": "styleseed-design-review", "path": "./skills/curated/engineering/styleseed-design-review/SKILL.md" },
-      { "name": "grill-me", "path": "./skills/curated/productivity/grill-me/SKILL.md" },
-      { "name": "grilling", "path": "./skills/curated/productivity/grilling/SKILL.md" },
-      { "name": "handoff", "path": "./skills/curated/productivity/handoff/SKILL.md" },
-      { "name": "domain-modeling", "path": "./skills/curated/productivity/domain-modeling/SKILL.md" },
-      { "name": "ui-designer", "path": "./skills/curated/design/ui-designer/SKILL.md" },
-      { "name": "product-analysis", "path": "./skills/curated/design/product-analysis/SKILL.md" },
-      { "name": "frontend-designer", "path": "./skills/curated/design/frontend-designer/SKILL.md" },
-      { "name": "ui-modernizer", "path": "./skills/curated/design/ui-modernizer/SKILL.md" },
-      { "name": "web-design-engineer", "path": "./skills/curated/design/web-design-engineer/SKILL.md" },
-      { "name": "component-design", "path": "./skills/own/nextjs/component-design/SKILL.md" },
-      { "name": "data-fetching", "path": "./skills/own/nextjs/data-fetching/SKILL.md" },
-      { "name": "performance", "path": "./skills/own/nextjs/performance/SKILL.md" },
-      { "name": "e2e-playwright", "path": "./skills/own/nextjs/e2e-playwright/SKILL.md" },
-      { "name": "accessibility", "path": "./skills/own/nextjs/accessibility/SKILL.md" },
-      { "name": "error-handling", "path": "./skills/own/nextjs/error-handling/SKILL.md" },
-      { "name": "vercel-deploy", "path": "./skills/own/nextjs/vercel-deploy/SKILL.md" },
-      { "name": "ui-ux-pro-max", "path": "./skills/own/design/ui-ux-pro-max/SKILL.md" },
-      { "name": "frontend-design", "path": "./skills/own/design/frontend-design/SKILL.md" },
-      { "name": "all-good-ui", "path": "./skills/own/design/all-good-ui/SKILL.md" },
-      { "name": "anti-ai-slop", "path": "./skills/own/design/anti-ai-slop/SKILL.md" },
-      { "name": "ckm-design", "path": "./skills/own/design/ckm-design/SKILL.md" },
-      { "name": "ckm-design-system", "path": "./skills/own/design/ckm-design-system/SKILL.md" },
-      { "name": "ckm-ui-styling", "path": "./skills/own/design/ckm-ui-styling/SKILL.md" },
-      { "name": "prd-development", "path": "./skills/own/product/prd-development/SKILL.md" },
-      { "name": "acceptance-criteria", "path": "./skills/own/product/acceptance-criteria/SKILL.md" },
-      { "name": "user-story", "path": "./skills/own/product/user-story/SKILL.md" },
-      { "name": "project-init", "path": "./skills/own/nextjs/project-init/SKILL.md" },
-      { "name": "layouts-routing", "path": "./skills/own/nextjs/layouts-routing/SKILL.md" },
-      { "name": "styling-tailwind", "path": "./skills/own/nextjs/styling-tailwind/SKILL.md" },
-      { "name": "seo-metadata", "path": "./skills/own/nextjs/seo-metadata/SKILL.md" },
-      { "name": "seo-checklist", "path": "./skills/own/nextjs/seo-checklist/SKILL.md" },
-      { "name": "ai-coding-workflow", "path": "./skills/own/ai/ai-coding-workflow/SKILL.md" },
-      { "name": "ai-code-review", "path": "./skills/own/ai/ai-code-review/SKILL.md" },
-      { "name": "ai-testing", "path": "./skills/own/ai/ai-testing/SKILL.md" },
-      { "name": "ai-debugging", "path": "./skills/own/ai/ai-debugging/SKILL.md" },
-      { "name": "ai-refactoring", "path": "./skills/own/ai/ai-refactoring/SKILL.md" },
-      { "name": "ai-git-workflow", "path": "./skills/own/ai/ai-git-workflow/SKILL.md" },
-      { "name": "gate", "path": "./skills/own/workflow/gate/SKILL.md" },
-      { "name": "gate-discuss", "path": "./skills/own/workflow/gate-discuss/SKILL.md" },
-      { "name": "gate-init", "path": "./skills/own/workflow/gate-init/SKILL.md" },
-      { "name": "gate-frontend", "path": "./skills/own/workflow/gate-frontend/SKILL.md" },
-      { "name": "gate-seo", "path": "./skills/own/workflow/gate-seo/SKILL.md" },
-      { "name": "gate-deploy", "path": "./skills/own/workflow/gate-deploy/SKILL.md" },
-      { "name": "gate-ai", "path": "./skills/own/workflow/gate-ai/SKILL.md" },
-      { "name": "gate-optimize", "path": "./skills/own/workflow/gate-optimize/SKILL.md" },
-      { "name": "gate-perf", "path": "./skills/own/workflow/gate-perf/SKILL.md" },
-      { "name": "gate-a11y", "path": "./skills/own/workflow/gate-a11y/SKILL.md" },
-      { "name": "gate-testcov", "path": "./skills/own/workflow/gate-testcov/SKILL.md" },
-      { "name": "gate-ci", "path": "./skills/own/workflow/gate-ci/SKILL.md" },
-      { "name": "gate-animate", "path": "./skills/own/workflow/gate-animate/SKILL.md" }
+      {
+        "name": "project-init",
+        "path": "./skills/website/project-init/SKILL.md"
+      },
+      {
+        "name": "layouts-routing",
+        "path": "./skills/website/layouts-routing/SKILL.md"
+      },
+      {
+        "name": "component-design",
+        "path": "./skills/website/component-design/SKILL.md"
+      },
+      {
+        "name": "styling-tailwind",
+        "path": "./skills/website/styling-tailwind/SKILL.md"
+      },
+      {
+        "name": "data-fetching",
+        "path": "./skills/website/data-fetching/SKILL.md"
+      },
+      {
+        "name": "seo-metadata",
+        "path": "./skills/website/seo-metadata/SKILL.md"
+      },
+      {
+        "name": "seo-checklist",
+        "path": "./skills/website/seo-checklist/SKILL.md"
+      },
+      {
+        "name": "performance",
+        "path": "./skills/website/performance/SKILL.md"
+      },
+      {
+        "name": "accessibility",
+        "path": "./skills/website/accessibility/SKILL.md"
+      },
+      {
+        "name": "error-handling",
+        "path": "./skills/website/error-handling/SKILL.md"
+      },
+      {
+        "name": "vercel-deploy",
+        "path": "./skills/website/vercel-deploy/SKILL.md"
+      },
+      {
+        "name": "e2e-playwright",
+        "path": "./skills/website/e2e-playwright/SKILL.md"
+      },
+      {
+        "name": "ui-designer",
+        "path": "./skills/design/ui-designer/SKILL.md"
+      },
+      {
+        "name": "product-analysis",
+        "path": "./skills/design/product-analysis/SKILL.md"
+      },
+      {
+        "name": "frontend-designer",
+        "path": "./skills/design/frontend-designer/SKILL.md"
+      },
+      {
+        "name": "ui-modernizer",
+        "path": "./skills/design/ui-modernizer/SKILL.md"
+      },
+      {
+        "name": "web-design-engineer",
+        "path": "./skills/design/web-design-engineer/SKILL.md"
+      },
+      {
+        "name": "ui-ux-pro-max",
+        "path": "./skills/design/ui-ux-pro-max/SKILL.md"
+      },
+      {
+        "name": "frontend-design",
+        "path": "./skills/design/frontend-design/SKILL.md"
+      },
+      {
+        "name": "anti-ai-slop",
+        "path": "./skills/design/anti-ai-slop/SKILL.md"
+      },
+      {
+        "name": "ckm-design",
+        "path": "./skills/design/ckm-design/SKILL.md"
+      },
+      {
+        "name": "ckm-design-system",
+        "path": "./skills/design/ckm-design-system/SKILL.md"
+      },
+      {
+        "name": "ckm-ui-styling",
+        "path": "./skills/design/ckm-ui-styling/SKILL.md"
+      },
+      {
+        "name": "gate-discuss",
+        "path": "./skills/discussion/discuss/SKILL.md"
+      },
+      {
+        "name": "grill-me",
+        "path": "./skills/discussion/grill-me/SKILL.md"
+      },
+      {
+        "name": "grilling",
+        "path": "./skills/discussion/grilling/SKILL.md"
+      },
+      {
+        "name": "handoff",
+        "path": "./skills/discussion/handoff/SKILL.md"
+      },
+      {
+        "name": "domain-modeling",
+        "path": "./skills/discussion/domain-modeling/SKILL.md"
+      },
+      {
+        "name": "tdd",
+        "path": "./skills/engineering/tdd/SKILL.md"
+      },
+      {
+        "name": "diagnosing-bugs",
+        "path": "./skills/engineering/diagnosing-bugs/SKILL.md"
+      },
+      {
+        "name": "prototype",
+        "path": "./skills/engineering/prototype/SKILL.md"
+      },
+      {
+        "name": "codebase-design",
+        "path": "./skills/engineering/codebase-design/SKILL.md"
+      },
+      {
+        "name": "code-review",
+        "path": "./skills/engineering/code-review/SKILL.md"
+      },
+      {
+        "name": "styleseed-design-review",
+        "path": "./skills/engineering/styleseed-design-review/SKILL.md"
+      },
+      {
+        "name": "prd-development",
+        "path": "./skills/product/prd-development/SKILL.md"
+      },
+      {
+        "name": "acceptance-criteria",
+        "path": "./skills/product/acceptance-criteria/SKILL.md"
+      },
+      {
+        "name": "user-story",
+        "path": "./skills/product/user-story/SKILL.md"
+      },
+      {
+        "name": "ai-coding-workflow",
+        "path": "./skills/ai/ai-coding-workflow/SKILL.md"
+      },
+      {
+        "name": "ai-code-review",
+        "path": "./skills/ai/ai-code-review/SKILL.md"
+      },
+      {
+        "name": "ai-testing",
+        "path": "./skills/ai/ai-testing/SKILL.md"
+      },
+      {
+        "name": "ai-debugging",
+        "path": "./skills/ai/ai-debugging/SKILL.md"
+      },
+      {
+        "name": "ai-refactoring",
+        "path": "./skills/ai/ai-refactoring/SKILL.md"
+      },
+      {
+        "name": "ai-git-workflow",
+        "path": "./skills/ai/ai-git-workflow/SKILL.md"
+      },
+      {
+        "name": "gate",
+        "path": "./skills/workflow/gate/SKILL.md"
+      },
+      {
+        "name": "gate-init",
+        "path": "./skills/workflow/gate-init/SKILL.md"
+      },
+      {
+        "name": "gate-frontend",
+        "path": "./skills/workflow/gate-frontend/SKILL.md"
+      },
+      {
+        "name": "gate-seo",
+        "path": "./skills/workflow/gate-seo/SKILL.md"
+      },
+      {
+        "name": "gate-deploy",
+        "path": "./skills/workflow/gate-deploy/SKILL.md"
+      },
+      {
+        "name": "gate-ai",
+        "path": "./skills/workflow/gate-ai/SKILL.md"
+      },
+      {
+        "name": "gate-optimize",
+        "path": "./skills/workflow/gate-optimize/SKILL.md"
+      },
+      {
+        "name": "gate-perf",
+        "path": "./skills/workflow/gate-perf/SKILL.md"
+      },
+      {
+        "name": "gate-a11y",
+        "path": "./skills/workflow/gate-a11y/SKILL.md"
+      },
+      {
+        "name": "gate-testcov",
+        "path": "./skills/workflow/gate-testcov/SKILL.md"
+      },
+      {
+        "name": "gate-ci",
+        "path": "./skills/workflow/gate-ci/SKILL.md"
+      },
+      {
+        "name": "gate-animate",
+        "path": "./skills/workflow/gate-animate/SKILL.md"
+      }
     ]
   }
 }
