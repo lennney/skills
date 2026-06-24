@@ -2,6 +2,11 @@
 name: gate-discuss
 description: 探讨阶段。用户不知道要做什么时加载。问 3 个问题定方向。
 disable-model-invocation: true
+trigger: 用户想搭建新网站，但不确定具体需求
+input: 用户的模糊想法
+output: 明确的需求文档
+next: gate-init
+dependencies: 无
 ---
 
 用户不知道要做什么。问 3 个问题，一次一个：
