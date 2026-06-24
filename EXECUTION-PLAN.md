@@ -18,45 +18,45 @@
 ### 任务清单
 
 #### 1.1 技能设计优化
-- [ ] 优化 gate 主入口 SKILL.md
-  - [ ] 采用三层加载策略
-  - [ ] 添加结构化描述（trigger/input/output/next/dependencies）
-  - [ ] 保持 SKILL.md <500 行
-- [ ] 优化其他 gate-* 技能
-  - [ ] gate-discuss
-  - [ ] gate-init
-  - [ ] gate-frontend
-  - [ ] gate-seo
-  - [ ] gate-deploy
-  - [ ] gate-optimize
-  - [ ] gate-perf
-  - [ ] gate-a11y
-  - [ ] gate-animate
-- [ ] 优化设计类技能
-  - [ ] ui-ux-pro-max
-  - [ ] component-design
-  - [ ] styling-tailwind
-  - [ ] ui-modernizer
-  - [ ] design-system
-  - [ ] anti-ai-slop
+- [x] 优化 gate 主入口 SKILL.md
+  - [x] 采用三层加载策略
+  - [x] 添加结构化描述（trigger/input/output/next/dependencies）
+  - [x] 保持 SKILL.md <500 行
+- [x] 优化其他 gate-* 技能
+  - [x] gate-discuss (不存在)
+  - [x] gate-init
+  - [x] gate-frontend
+  - [x] gate-seo
+  - [x] gate-deploy
+  - [x] gate-optimize
+  - [x] gate-perf
+  - [x] gate-a11y
+  - [x] gate-animate
+- [x] 优化设计类技能
+  - [x] ui-ux-pro-max
+  - [x] component-design
+  - [x] styling-tailwind
+  - [x] ui-modernizer
+  - [x] design-system
+  - [x] anti-ai-slop
 
 #### 1.2 路由系统重构
-- [ ] 更新 gate 主入口路由规则
-- [ ] 添加意图识别表
-- [ ] 添加项目状态检查逻辑
-- [ ] 添加路由优先级规则
+- [x] 更新 gate 主入口路由规则
+- [x] 添加意图识别表
+- [x] 添加项目状态检查逻辑
+- [x] 添加路由优先级规则
 - [ ] 测试路由准确性
 
 #### 1.3 文档更新
-- [ ] 更新 README.md
-- [ ] 更新 ROUTING-GUIDE.md
-- [ ] 更新 SKILL-OPTIMIZATION.md
+- [x] 更新 README.md
+- [x] 更新 ROUTING-GUIDE.md
+- [x] 更新 SKILL-OPTIMIZATION.md
 - [ ] 创建使用示例库
 
 ### 验收标准
-- [ ] 所有 gate-* 技能都有结构化描述
+- [x] 所有 gate-* 技能都有结构化描述
 - [ ] 路由系统能正确识别用户意图
-- [ ] 文档完整且准确
+- [x] 文档完整且准确
 - [ ] 通过基本功能测试
 
 ### 预期产出
