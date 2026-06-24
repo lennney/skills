@@ -23,7 +23,7 @@
   - [x] 添加结构化描述（trigger/input/output/next/dependencies）
   - [x] 保持 SKILL.md <500 行
 - [x] 优化其他 gate-* 技能
-  - [x] gate-discuss (不存在)
+  - [x] gate-discuss
   - [x] gate-init
   - [x] gate-frontend
   - [x] gate-seo
