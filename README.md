@@ -187,46 +187,47 @@ skills/
 
 ### 🎯 多平台支持
 
-Skills 支持 Claude Code 和 Codex 平台：
+支持 70+ 个 AI 编码助手平台：
 
-| 平台 | 格式 | 安装方式 |
-|------|------|----------|
-| **Claude Code** | SKILL.md | `npx skills install -p claude` |
-| **Codex** | AGENTS.md | `npx skills install -p codex` |
+| 平台 | 安装方式 |
+|------|----------|
+| **Claude Code** | `npx skills add lennney/skills` |
+| **Codex** | `npx skills add lennney/skills` |
+| **Cursor** | `npx skills add lennney/skills` |
+| **Windsurf** | `npx skills add lennney/skills` |
+| **GitHub Copilot** | `npx skills add lennney/skills` |
+| **Gemini CLI** | `npx skills add lennney/skills` |
+| **其他 60+ 平台** | `npx skills add lennney/skills` |
 
-### 方法 1：一键安装（推荐）
+### 方法 1：使用 skills.sh（推荐，支持 70+ 平台）
 
 ```bash
-# 自动检测平台并安装
-npx skills install
+# 自动检测平台并安装所有技能
+npx skills add lennney/skills
 
-# 或指定平台
-npx skills install -p claude      # Claude Code
-npx skills install -p codex       # Codex
+# 安装特定技能
+npx skills add lennney/skills@gate
+npx skills add lennney/skills@ui-ux-pro-max
 ```
 
-### 方法 2：Git Submodule（团队协作推荐）
-```bash
-git submodule add https://github.com/lennney/skills.git .claude/skills
-```
-
-### 方法 3：提示词安装（最简单）
-
-复制 `prompts/install-auto.md` 中的提示词到 AI 编码助手中，自动安装。
-
-### 方法 4：手动安装
+### 方法 2：使用你的 CLI
 
 ```bash
 # 克隆仓库
 git clone https://github.com/lennney/skills.git
 cd skills
 
-# 安装到 Claude Code
-node bin/skills.js install -p claude
+# 自动检测平台并安装
+npx gate-all-skills install
 
-# 或安装到 Codex
-node bin/skills.js install -p codex
+# 或指定平台
+npx gate-all-skills install -p claude      # Claude Code
+npx gate-all-skills install -p codex       # Codex
 ```
+
+### 方法 3：提示词安装（最简单）
+
+复制 `prompts/install-auto.md` 中的提示词到 AI 编码助手中，自动安装。
 
 ### 开始使用
 ```bash
