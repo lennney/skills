@@ -1,0 +1,38 @@
+{
+  "name": "skills",
+  "version": "1.1.0",
+  "description": "AI 编码助手技能系统 - 支持 Claude Code 和 Codex",
+  "main": "bin/skills.js",
+  "bin": {
+    "skills": "./bin/skills.js"
+  },
+  "scripts": {
+    "install:claude": "node bin/install.js -p claude",
+    "install:codex": "node bin/install.js -p codex",
+    "update": "node bin/update.js",
+    "check-update": "node bin/update.js -c"
+  },
+  "keywords": [
+    "skills",
+    "ai",
+    "claude",
+    "codex",
+    "coding-assistant",
+    "agent"
+  ],
+  "author": "lennney",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lennney/skills.git"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "skills/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
