@@ -1,0 +1,409 @@
+# Project Instructions
+
+## Skills System
+
+This project uses a skill-based system for AI assistance. Each skill provides specific capabilities.
+
+### Available Skills
+
+
+#### ai-code-review
+- **Purpose**: AI 审查。用户要审查代码时加载。你在后台检查完告诉用户结果。
+- **When to use**: 需要 AI 审查代码
+- **Input**: 代码文件
+- **Output**: AI 审查报告
+- **Next**: 无
+
+#### ai-coding-workflow
+- **Purpose**: AI 编码。用户要写代码时加载。让用户描述要做什么，你在后台实现。
+- **When to use**: 需要 AI 协助写代码
+- **Input**: 代码需求
+- **Output**: AI 生成的代码
+- **Next**: ai-code-review
+
+#### ai-debugging
+- **Purpose**: AI 调试。用户 debug 时加载。让用户描述问题，你在后台分析修复。
+- **When to use**: 需要 AI 帮助调试
+- **Input**: 错误信息
+- **Output**: 调试建议
+- **Next**: 无
+
+#### ai-git-workflow
+- **Purpose**: AI Git 操作。用户需要 commit/PR 时加载。你在后台生成好，用户确认即可。
+- **When to use**: 需要处理 Git 操作
+- **Input**: 代码变更
+- **Output**: commit/PR 描述
+- **Next**: 无
+
+#### ai-refactoring
+- **Purpose**: AI 重构。用户要重构代码时加载。先定范围，你在后台改完验证。
+- **When to use**: 需要 AI 帮助重构
+- **Input**: 代码文件
+- **Output**: 重构建议
+- **Next**: code-review
+
+#### ai-testing
+- **Purpose**: AI 测试。用户要加测试时加载。你在后台分析代码、写测试、跑通。
+- **When to use**: 需要 AI 生成测试
+- **Input**: 代码文件
+- **Output**: 测试用例
+- **Next**: 无
+
+#### anti-ai-slop
+- **Purpose**: Create frontend UIs that don't look AI-generated. Use when building new pages or reviewing design output for "AI taste.
+- **When to use**: 需要创建独特的 UI 设计
+- **Input**: 设计需求或现有 UI
+- **Output**: 非 AI 风格的设计
+- **Next**: 无
+
+#### ckm-design
+- **Purpose**: Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.
+- **When to use**: 需要全面的设计服务
+- **Input**: 设计需求
+- **Output**: 设计作品
+- **Next**: 无
+
+#### ckm-design-system
+- **Purpose**: Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
+- **When to use**: 需要建立设计系统
+- **Input**: 设计规范
+- **Output**: 设计系统文档
+- **Next**: 无
+
+#### ckm-ui-styling
+- **Purpose**: Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.
+- **When to use**: 需要创建美观的用户界面
+- **Input**: 设计需求
+- **Output**: UI 组件和样式
+- **Next**: 无
+
+#### frontend-design
+- **Purpose**: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.
+- **When to use**: 需要创建高质量的前端界面
+- **Input**: 前端需求
+- **Output**: 前端代码
+- **Next**: 无
+
+#### frontend-designer
+- **Purpose**: Build accessible, responsive, and performant frontend components with design system best practices, modern CSS, and framework-agnostic patterns.
+- **When to use**: 需要构建可访问、响应式的前端组件
+- **Input**: 设计需求
+- **Output**: 前端组件
+- **Next**: 无
+
+#### product-analysis
+- **Purpose**: Multi-path parallel product analysis with cross-model test-time compute scaling. Spawns parallel agents (Claude Code agent teams + Codex CLI) to explore product from multiple perspectives, then synthesizes findings into actionable optimization plans. Can invoke competitors-analysis for competitive benchmarking. Use when "product audit", "self-review", "发布前审查", "产品分析", "analyze our product", "UX audit", or "信息架构审计".
+- **When to use**: 需要全面的产品分析
+- **Input**: 产品信息
+- **Output**: 分析报告
+- **Next**: 无
+
+#### ui-designer
+- **Purpose**: Extract design systems from reference UI images and generate implementation-ready UI design prompts. Use when users provide UI screenshots/mockups and want to create consistent designs, generate design systems, or build MVP UIs matching reference aesthetics.
+- **When to use**: 需要从参考图像提取设计系统
+- **Input**: UI 截图或设计稿
+- **Output**: 设计系统文档
+- **Next**: 无
+
+#### ui-modernizer
+- **Purpose**: Modernize a React/Vue/Svelte + Tailwind UI to 2026 SaaS-grade design (Linear / Vercel / Stripe / shadcn aesthetic). Supports Next.js, Nuxt 3, SvelteKit, and Vite. Trigger when the user says "modernize this UI", "modernize the UI", "upgrade the design", "make this look modern", "make the UI look like Linear/Vercel/Stripe", or otherwise asks to refresh / level-up the visual design of a frontend codebase. Do NOT use for new feature work, bug fixes, or business logic changes.
+- **When to use**: 需要升级旧界面
+- **Input**: 旧界面截图或代码
+- **Output**: 现代化设计
+- **Next**: component-design
+
+#### ui-ux-pro-max
+- **Purpose**: UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.
+- **When to use**: 需要完整的 UI/UX 设计方案
+- **Input**: 需求文档或截图
+- **Output**: 设计稿和规范
+- **Next**: component-design / styling-tailwind
+
+#### web-design-engineer
+- **Purpose**: >
+- **When to use**: 需要构建专业的网站和落地页
+- **Input**: 网站需求
+- **Output**: 完整的网站
+- **Next**: 无
+
+#### discuss
+- **Purpose**: 探讨阶段。用户不知道要做什么时加载。问 3 个问题定方向。
+- **When to use**: 用户想搭建新网站，但不确定具体需求
+- **Input**: 用户的模糊想法
+- **Output**: 明确的需求文档
+- **Next**: gate-init
+
+#### domain-modeling
+- **Purpose**: Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintain the domain model.
+- **When to use**: 需要设计业务模型
+- **Input**: 业务需求
+- **Output**: 领域模型
+- **Next**: codebase-design
+
+#### grill-me
+- **Purpose**: A relentless interview to sharpen a plan or design.
+- **When to use**: 需要严格审查计划或设计
+- **Input**: 计划或设计文档
+- **Output**: 审查反馈
+- **Next**: 无
+
+#### grilling
+- **Purpose**: Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.
+- **When to use**: 需要严格审查计划或设计
+- **Input**: 计划或设计文档
+- **Output**: 审查反馈
+- **Next**: 无
+
+#### handoff
+- **Purpose**: Compact the current conversation into a handoff document for another agent to pick up.
+- **When to use**: 需要交接上下文
+- **Input**: 当前进度
+- **Output**: 上下文文档
+- **Next**: 无
+
+#### code-review
+- **Purpose**: |
+- **When to use**: 需要审查代码质量
+- **Input**: 代码文件
+- **Output**: 审查报告
+- **Next**: diagnosing-bugs / ai-refactoring
+
+#### codebase-design
+- **Purpose**: Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.
+- **When to use**: 需要设计代码架构
+- **Input**: 项目需求
+- **Output**: 架构设计文档
+- **Next**: 无
+
+#### diagnosing-bugs
+- **Purpose**: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+- **When to use**: 遇到 bug 需要调试
+- **Input**: 错误信息或异常行为
+- **Output**: bug 原因和修复方案
+- **Next**: 无
+
+#### prototype
+- **Purpose**: Build a throwaway prototype to flesh out a design — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route.
+- **When to use**: 需要快速验证想法
+- **Input**: 想法描述
+- **Output**: 可交互原型
+- **Next**: ui-ux-pro-max
+
+#### styleseed-design-review
+- **Purpose**: Reviews UI/frontend code and tells you exactly why it "looks AI-generated" — then how to fix it. Use it when a React/Tailwind/HTML interface looks off, generic, or unfinished, when you want a design score before shipping, or when asked to make UI look more professional, polished, or "designed, not generated." Self-contained; based on the open-source StyleSeed design engine.
+- **When to use**: 需要审查 UI 设计质量
+- **Input**: UI 代码
+- **Output**: 设计审查报告
+- **Next**: 无
+
+#### tdd
+- **Purpose**: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+- **When to use**: 需要用测试驱动开发
+- **Input**: 功能需求
+- **Output**: 测试用例和实现代码
+- **Next**: 无
+
+#### acceptance-criteria
+- **Purpose**: Write testable acceptance criteria and acceptance tests for requirements using Given/When/Then, checklist, and rule-based formats. Use when defining the conditions that prove a requirement is correctly implemented.
+- **When to use**: 需要定义功能完成标准
+- **Input**: PRD 文档
+- **Output**: 验收标准列表
+- **Next**: user-story
+
+#### prd-development
+- **Purpose**: Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a major initiative.
+- **When to use**: 需要写产品需求文档
+- **Input**: 产品想法
+- **Output**: PRD 文档
+- **Next**: acceptance-criteria
+
+#### user-story
+- **Purpose**: Create user stories with Mike Cohn format and Gherkin acceptance criteria. Use when turning user needs into development-ready work with clear outcomes and testable conditions.
+- **When to use**: 需要描述用户需求
+- **Input**: 验收标准
+- **Output**: 用户故事列表
+- **Next**: 无
+
+#### accessibility
+- **Purpose**: Web accessibility (WCAG 2.2) for Next.js applications — semantic HTML, ARIA, keyboard navigation, screen reader support, and automated testing. Use when building new pages, reviewing component accessibility, or fixing accessibility issues.
+- **When to use**: 需要提升网站可访问性
+- **Input**: 网站代码
+- **Output**: 可访问性优化建议
+- **Next**: 无
+
+#### component-design
+- **Purpose**: Design React/Next.js component APIs with clear Server/Client boundaries, composable patterns, and proper seam placement. Use when designing new components, refactoring existing ones, or deciding between Server/Client Component boundaries.
+- **When to use**: 需要设计可复用的组件
+- **Input**: 设计稿或需求
+- **Output**: 组件设计文档
+- **Next**: styling-tailwind
+
+#### data-fetching
+- **Purpose**: |
+- **When to use**: 需要实现数据获取逻辑
+- **Input**: 数据需求
+- **Output**: 数据获取代码
+- **Next**: 无
+
+#### e2e-playwright
+- **Purpose**: End-to-end testing with Playwright in Next.js applications — user flow coverage, component testing, and CI integration. Use when writing E2E tests, debugging flaky tests, or setting up test infrastructure.
+- **When to use**: 需要编写端到端测试
+- **Input**: 测试需求
+- **Output**: E2E 测试代码
+- **Next**: 无
+
+#### error-handling
+- **Purpose**: Frontend error handling patterns for Next.js — error boundaries, API error display, form validation errors, and global error recovery strategies. Use when implementing error states, debugging error UI, or designing error recovery flows.
+- **When to use**: 需要实现错误处理
+- **Input**: 错误处理需求
+- **Output**: 错误处理代码
+- **Next**: 无
+
+#### layouts-routing
+- **Purpose**: Next.js App Router 布局模式。设计页面结构、路由组织、布局嵌套时加载。
+- **When to use**: 需要设计页面布局和路由
+- **Input**: 页面结构需求
+- **Output**: 布局和路由代码
+- **Next**: 无
+
+#### performance
+- **Purpose**: Next.js performance optimization — Core Web Vitals, ISR/SSG strategy, bundle analysis, image optimization, and runtime performance patterns. Use when diagnosing slow pages, optimizing Core Web Vitals, or reviewing production performance.
+- **When to use**: 需要优化网站性能
+- **Input**: 性能问题
+- **Output**: 性能优化建议
+- **Next**: 无
+
+#### project-init
+- **Purpose**: 项目初始化。用户要搭新 Next.js 项目时加载。按顺序执行脚手架命令。
+- **When to use**: 需要初始化新项目
+- **Input**: 项目需求
+- **Output**: 项目脚手架
+- **Next**: 无
+
+#### seo-checklist
+- **Purpose**: SEO 完整检查清单。网站上线前或 SEO 整改后加载。自动逐项检查，只问用户不知道的内容（关键词、网站描述）。
+- **When to use**: 需要进行 SEO 检查
+- **Input**: 网站信息
+- **Output**: SEO 检查报告
+- **Next**: 无
+
+#### seo-metadata
+- **Purpose**: Next.js SEO 完整配置。涵盖 Metadata API、Open Graph、JSON-LD 结构化数据、Sitemap、Robots.txt。新建页面或 SEO 整改时加载。
+- **When to use**: 需要配置 SEO 元数据
+- **Input**: 网站信息
+- **Output**: SEO 配置代码
+- **Next**: 无
+
+#### styling-tailwind
+- **Purpose**: Tailwind CSS v4 实践。写样式时加载。用 cn()、语义色值、mobile-first 响应式、dark mode。
+- **When to use**: 需要用 Tailwind CSS 写样式
+- **Input**: 组件结构
+- **Output**: 样式代码
+- **Next**: 无
+
+#### vercel-deploy
+- **Purpose**: Vercel deployment workflows for Next.js — preview deployments, environment variables, branch configuration, log troubleshooting, and production rollbacks. Use when deploying to Vercel, debugging failed builds, or configuring deployment settings.
+- **When to use**: 需要部署到 Vercel
+- **Input**: 项目代码
+- **Output**: 部署配置
+- **Next**: 无
+
+#### gate
+- **Purpose**: 技能路由入口。根据用户需求路由到对应技能，覆盖建站、设计、工程、AI、产品全流程。
+- **When to use**: 用户不确定使用哪个技能
+- **Input**: 用户需求
+- **Output**: 路由到对应技能
+- **Next**: 所有技能
+
+#### gate-a11y
+- **Purpose**: 无障碍优化。用户要提升无障碍时加载。后台修完用大白话解释。
+- **When to use**: 需要提升网站可访问性
+- **Input**: 可访问性审计报告
+- **Output**: 可访问性优化方案
+- **Next**: 无
+
+#### gate-ai
+- **Purpose**: AI 辅助。用户需要帮忙时加载。问用户在做什么，路由到对应 ai-* 技能。
+- **When to use**: 需要 AI 辅助
+- **Input**: 用户需求
+- **Output**: AI 辅助结果
+- **Next**: ai-coding-workflow / ai-code-review / ai-testing / ai-debugging / ai-refactoring / ai-git-workflow
+
+#### gate-animate
+- **Purpose**: 动效优化。用户要加动效时加载。问想要什么效果，实现后解释作用。
+- **When to use**: 需要添加动效
+- **Input**: 动效需求
+- **Output**: 动效实现
+- **Next**: 无
+
+#### gate-ci
+- **Purpose**: CI/CD。用户要自动部署时加载。配置好后解释自动部署的好处。
+- **When to use**: 需要配置 CI/CD
+- **Input**: 项目配置
+- **Output**: CI/CD 配置
+- **Next**: 无
+
+#### gate-deploy
+- **Purpose**: 部署阶段。SEO 配好后加载。帮用户上线，用大白话解释每步在做什么。
+- **When to use**: SEO 优化完成，需要部署上线
+- **Input**: 优化后的代码
+- **Output**: 已部署的网站
+- **Next**: gate-optimize
+
+#### gate-frontend
+- **Purpose**: 前端开发。项目搭好后加载。问用户要什么页面，你在后台建好并解释每步。
+- **When to use**: 项目已初始化，需要开发前端
+- **Input**: 项目脚手架
+- **Output**: 前端页面和组件
+- **Next**: gate-seo
+
+#### gate-init
+- **Purpose**: 项目初始化。用户确认要搭站后加载。你在后台建好项目，用大白话告诉用户每一步在做什么。
+- **When to use**: 需求已明确，需要初始化项目
+- **Input**: 需求文档
+- **Output**: 项目脚手架
+- **Next**: gate-frontend
+
+#### gate-optimize
+- **Purpose**: 优化路由。用户想提升网站时加载。选方向，后台优化，用大白话解释效果。
+- **When to use**: 网站已上线，需要优化
+- **Input**: 已部署的网站
+- **Output**: 优化建议
+- **Next**: gate-perf / gate-a11y / gate-animate
+
+#### gate-perf
+- **Purpose**: 性能优化。用户想加速时加载。后台优化后告诉用户提升了什么。
+- **When to use**: 网站加载速度慢
+- **Input**: 性能数据
+- **Output**: 性能优化方案
+- **Next**: 无
+
+#### gate-seo
+- **Purpose**: SEO 阶段。前端完成后加载。先问 2 个简单问题，然后按 P0→P1→P2 顺序执行完整的 SEO 检查与修复。
+- **When to use**: 前端开发完成，需要优化 SEO
+- **Input**: 前端代码
+- **Output**: SEO 优化后的代码
+- **Next**: gate-deploy
+
+#### gate-testcov
+- **Purpose**: 测试覆盖。用户要加测试时加载。分析核心功能写测试，告诉用户作用。
+- **When to use**: 需要添加测试覆盖
+- **Input**: 项目代码
+- **Output**: 测试代码
+- **Next**: 无
+
+### How to Use
+
+1. **Start with Gate**: Use `/gate` to route to the appropriate skill
+2. **Follow the Flow**: Each skill recommends the next skill to use
+3. **Customize**: Modify skills in the `skills/` directory
+
+### Skill Format
+
+Each skill follows this structure:
+- **Name**: Unique identifier
+- **Description**: What the skill does
+- **Trigger**: When to use this skill
+- **Input**: What the skill needs
+- **Output**: What the skill produces
+- **Next**: Recommended next skill
