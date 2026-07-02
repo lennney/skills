@@ -5,7 +5,7 @@ trigger: 网站已上线，需要优化
 input: 已部署的网站
 output: 优化建议
 next: gate-perf / gate-a11y / gate-animate
-dependencies: gate-deploy
+dependencies: gate-seo
 ---
 
 问："想让网站变得更好？选一个方向："

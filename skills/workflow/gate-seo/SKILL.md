@@ -4,7 +4,7 @@ description: SEO 阶段。前端完成后加载。先问 2 个简单问题，然
 trigger: 前端开发完成，需要优化 SEO
 input: 前端代码
 output: SEO 优化后的代码
-next: gate-deploy
+next: gate-optimize
 dependencies: gate-frontend
 ---
 
@@ -78,4 +78,4 @@ dependencies: gate-frontend
 
 完成后汇报状态："SEO 全部没问题 ✅" 或 "有几个建议项 ⚠️"
 
-然后建议下一步：`/gate-deploy`
+然后建议下一步：`/gate-optimize`

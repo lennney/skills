@@ -32,7 +32,7 @@
       {
         "name": "seo-copywriting",
         "path": "./skills/website/seo-copywriting/SKILL.md"
-      },      },
+      },
       {
         "name": "performance",
         "path": "./skills/website/performance/SKILL.md"
@@ -44,10 +44,6 @@
       {
         "name": "error-handling",
         "path": "./skills/website/error-handling/SKILL.md"
-      },
-      {
-        "name": "vercel-deploy",
-        "path": "./skills/website/vercel-deploy/SKILL.md"
       },
       {
         "name": "e2e-playwright",
@@ -192,10 +188,6 @@
       {
         "name": "gate-seo",
         "path": "./skills/workflow/gate-seo/SKILL.md"
-      },
-      {
-        "name": "gate-deploy",
-        "path": "./skills/workflow/gate-deploy/SKILL.md"
       },
       {
         "name": "gate-ai",

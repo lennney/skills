@@ -23,7 +23,6 @@ dependencies: 无
 | 建站 | 搭建、新建、从零开始 | `/gate-discuss` |
 | 前端开发 | 页面、组件、样式、UI | `/gate-frontend` |
 | SEO | 搜索引擎、SEO、优化 | `/gate-seo` |
-| 部署 | 上线、部署、发布 | `/gate-deploy` |
 | UI 设计 | 设计、界面、原型、UX | `/ui-ux-pro-max` |
 | 组件设计 | 组件、复用、组件库 | `/component-design` |
 | 样式 | Tailwind、CSS、样式 | `/styling-tailwind` |
@@ -97,10 +96,8 @@ gate-seo:
   trigger: 前端开发完成，需要优化 SEO
   input: 前端代码
   output: SEO 优化后的代码
-  next: gate-deploy
   dependencies: gate-frontend
 
-gate-deploy:
   trigger: SEO 优化完成，需要部署上线
   input: 优化后的代码
   output: 已部署的网站
@@ -116,7 +113,6 @@ gate-optimize:
   input: 已部署的网站
   output: 优化建议
   next: gate-perf / gate-a11y / gate-animate
-  dependencies: gate-deploy
 
 gate-perf:
   trigger: 网站加载速度慢
