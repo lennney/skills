@@ -1,6 +1,6 @@
 ---
 name: gate-testcov
-description: 测试覆盖。用户要加测试时加载。分析核心功能写测试，告诉用户作用。
+description: "测试覆盖 / Test coverage. Adds tests for core functionality. Use when the user wants to add test coverage to their project."
 trigger: 需要添加测试覆盖
 input: 项目代码
 output: 测试代码

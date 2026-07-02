@@ -1,6 +1,6 @@
 ---
 name: gate-discuss
-description: 探讨阶段。用户不知道要做什么时加载。问 3 个问题定方向。
+description: "需求探讨 / Discovery discussion. Asks 3 questions to clarify project scope. Use when the user wants to build a new site but isn't sure what they need."
 disable-model-invocation: true
 trigger: 用户想搭建新网站，但不确定具体需求
 input: 用户的模糊想法

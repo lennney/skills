@@ -1,8 +1,8 @@
 ---
 name: salgadoia-web-design-engineer-pro
 version: 1.0.0
-description: >
 source: Luispitik
+description: >
   Skill end-to-end para construir webs y landings profesionales con Next.js 16,
   React 19, Tailwind CSS v4, shadcn/ui y Framer Motion. Pensada para que un
   usuario sin conocimientos técnicos pueda PREVISUALIZAR estilos en su navegador

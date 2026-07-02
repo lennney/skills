@@ -1,6 +1,6 @@
 ---
 name: gate-init
-description: 项目初始化。用户确认要搭站后加载。你在后台建好项目，用大白话告诉用户每一步在做什么。
+description: "项目初始化 / Project scaffolding. Scaffolds a new Next.js project step by step. Use when the user confirms they want to build a new site or start a new app."
 trigger: 需求已明确，需要初始化项目
 input: 需求文档
 output: 项目脚手架

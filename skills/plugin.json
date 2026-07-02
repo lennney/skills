@@ -30,6 +30,10 @@
         "path": "./skills/website/seo-checklist/SKILL.md"
       },
       {
+        "name": "seo-copywriting",
+        "path": "./skills/website/seo-copywriting/SKILL.md"
+      },      },
+      {
         "name": "performance",
         "path": "./skills/website/performance/SKILL.md"
       },

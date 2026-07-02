@@ -203,10 +203,10 @@ See `examples/sample.md` for complete acceptance criteria sets.
 ## References
 
 ### Related Skills
-- `skills/user-story-re/SKILL.md` -- Acceptance criteria are part of every user story
-- `skills/use-case/SKILL.md` -- Acceptance criteria can be derived from use case flows
-- `skills/business-rule/SKILL.md` -- Rule-based criteria often implement business rules
-- `skills/requirements-validation-process/SKILL.md` -- Acceptance criteria are validated during review
+- `user-story-re` -- Acceptance criteria are part of every user story
+- `use-case` -- Acceptance criteria can be derived from use case flows
+- `business-rule` -- Rule-based criteria often implement business rules
+- `requirements-validation-process` -- Acceptance criteria are validated during review
 
 ### External Frameworks
 - Dan North, "Introducing BDD" (2006) -- Given/When/Then format
@@ -217,4 +217,4 @@ See `examples/sample.md` for complete acceptance criteria sets.
 
 **Skill type:** Component
 **Dependencies:** None
-**Used by:** `skills/user-story-re/SKILL.md`, `skills/requirements-validation-process/SKILL.md`
+**Used by:** `user-story-re`, `requirements-validation-process`

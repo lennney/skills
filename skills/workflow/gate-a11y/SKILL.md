@@ -1,6 +1,6 @@
 ---
 name: gate-a11y
-description: 无障碍优化。用户要提升无障碍时加载。后台修完用大白话解释。
+description: "无障碍优化 / Accessibility optimization. Fixes WCAG issues, ARIA, semantic HTML, and keyboard navigation. Use when the user wants to improve accessibility."
 trigger: 需要提升网站可访问性
 input: 可访问性审计报告
 output: 可访问性优化方案

@@ -1,12 +1,12 @@
 ---
 name: code-review-skill
-description: |
-source: awesome-skills
-  Provides comprehensive code review guidance for React 19, Vue 3, Angular 17+, Svelte 5, Rust, TypeScript, Java, PHP, Python, Django, Go, C#/.NET, Kotlin, Swift, NestJS, C/C++, and more.
+description: >
+  Comprehensive code review guidance for React 19, Vue 3, Angular 17+, Svelte 5, Rust, TypeScript, Java, PHP, Python, Django, Go, C#/.NET, Kotlin, Swift, NestJS, C/C++, and more.
   Helps catch bugs, improve code quality, and give constructive feedback.
-  Use when: reviewing pull requests, conducting PR reviews, code review, reviewing code changes,
+  Use when reviewing pull requests, conducting PR reviews, code review, reviewing code changes,
   establishing review standards, mentoring developers, architecture reviews, security audits,
   checking code quality, finding bugs, giving feedback on code.
+source: awesome-skills
 allowed-tools:
   - Read
   - Grep

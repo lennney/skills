@@ -1,6 +1,6 @@
 ---
 name: gate-animate
-description: 动效优化。用户要加动效时加载。问想要什么效果，实现后解释作用。
+description: "动效优化 / Animation. Adds motion, transitions, and UI animations. Use when the user wants to add animation effects to their site."
 trigger: 需要添加动效
 input: 动效需求
 output: 动效实现

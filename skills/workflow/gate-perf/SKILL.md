@@ -1,6 +1,6 @@
 ---
 name: gate-perf
-description: 性能优化。用户想加速时加载。后台优化后告诉用户提升了什么。
+description: "性能优化 / Performance optimization. Optimizes site speed, Core Web Vitals, and load times. Use when the site is slow or the user wants to speed things up."
 trigger: 网站加载速度慢
 input: 性能数据
 output: 性能优化方案

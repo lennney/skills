@@ -1,6 +1,6 @@
 ---
 name: gate-frontend
-description: 前端开发。项目搭好后加载。问用户要什么页面，你在后台建好并解释每步。
+description: "前端开发 / Frontend development. Builds pages and components from project scaffold. Use when the project is initialized and the user wants to build the UI."
 trigger: 项目已初始化，需要开发前端
 input: 项目脚手架
 output: 前端页面和组件

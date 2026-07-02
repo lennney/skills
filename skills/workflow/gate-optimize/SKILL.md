@@ -1,6 +1,6 @@
 ---
 name: gate-optimize
-description: 优化路由。用户想提升网站时加载。选方向，后台优化，用大白话解释效果。
+description: "网站优化 / Site optimization. Routes users to perf, a11y, or animation optimization. Use when the site is live and the user wants to improve it."
 trigger: 网站已上线，需要优化
 input: 已部署的网站
 output: 优化建议
